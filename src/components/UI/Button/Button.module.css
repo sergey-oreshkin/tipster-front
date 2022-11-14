@@ -1,0 +1,8 @@
+.button {
+    margin-left: 35px;
+}
+
+.button:hover {
+    color: black;
+    cursor: pointer;
+}

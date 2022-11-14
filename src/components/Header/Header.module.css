@@ -1,0 +1,9 @@
+.header {
+    color: #555;
+    width: 100%;
+    height: 55px;
+    margin: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ddf;
+}

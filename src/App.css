@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Helvetica,Arial,sans-serif;
+  height: 100%;
+  font-size: 16px;
+}
+
+#root {
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  /* width: 1150px; */
+  width: 95%;
+  height: 100%;
+  /* display: flex;
+  justify-content: center; */
+}

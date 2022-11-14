@@ -1,0 +1,10 @@
+.main {
+    border: 2px solid black;
+    margin: 3px 7px;
+    width: 100%;
+    display: flex;
+}
+
+.main * {
+    margin: 5px;
+}
