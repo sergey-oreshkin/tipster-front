@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Title from '../Title/Title';
 
-const Chapter = (props) => {
+const Chapter = ({ id, title }) => {
 
     const [show, setShow] = useState(false);
 
@@ -12,7 +12,7 @@ const Chapter = (props) => {
 
     return (
         <div>
-            <p onClick={toggleShow}>{props.title}</p>
+            <p onClick={toggleShow}>{title}</p>
             {
                 show
                     ?
