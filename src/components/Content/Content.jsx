@@ -1,8 +1,20 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Content = () => {
+
+  const { activeTip, activeTheme, tips } = useSelector(state => state);
+
   return (
-    <div>Content</div>
+    <div>
+      {
+        activeTip !== 0 
+        ? 
+        tips[activeTheme] ? tips[activeTheme].find(tip => tip.id === activeTip).text : '' 
+        : 
+        ''
+      }
+    </div>
   )
 }
 

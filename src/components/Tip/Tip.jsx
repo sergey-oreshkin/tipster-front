@@ -2,13 +2,13 @@ import React from 'react';
 
 import cl from './Title.module.css';
 
-const Title = () => {
+const Tip = ({tip, clickHandle}) => {
     
   return (
     <div className={cl.title}>
-        Title
+        <p onClick={()=>clickHandle(tip.id, 'tip')}>{tip.title}</p>
     </div>
   )
 }
 
-export default Title;
+export default Tip;

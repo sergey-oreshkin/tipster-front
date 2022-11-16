@@ -7,7 +7,7 @@ import baseUrl from './ApiSetup';
 
 const updateThemes = createAsyncThunk(
     'get/themes',
-    async (state, { rejectWithValue }) => {
+    async (arg, { rejectWithValue }) => {
         try {
             const config = { headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' } };
             const uri = '/themes';

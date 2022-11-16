@@ -1,25 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-import Title from '../Title/Title';
+import Tip from '../Tip/Tip';
 
-const Chapter = ({ id, title }) => {
-
-    const [show, setShow] = useState(false);
-
-    const toggleShow = () => {
-        setShow(!show);
-    }
+const Chapter = ({ theme, clickHandle }) => {
+    const { activeTheme, tips } = useSelector(state => state);
 
     return (
         <div>
-            <p onClick={toggleShow}>{title}</p>
+            <p onClick={() => clickHandle(theme.id, 'theme')}>{theme.title}</p>
             {
-                show
+                activeTheme === theme.id
                     ?
-                    <div>
-                        <Title />
-                        <Title />
-                    </div>
+                    tips[theme.id] ? tips[theme.id].map(tip => <Tip key={tip.id} tip={tip} clickHandle={clickHandle}/>):''
                     :
                     ''
             }
