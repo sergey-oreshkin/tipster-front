@@ -4,7 +4,7 @@ import cl from './Logo.module.css';
 const Logo = () => {
     return (
         <div className={cl.logo}>
-            <h2>Tipster</h2>
+            <h2>Типстер</h2>
         </div>
     )
 }

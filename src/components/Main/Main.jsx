@@ -8,8 +8,8 @@ import cl from './Main.module.css';
 const Main = () => {
   return (
     <div className={cl.main}>
-        <Sidebar />
-        <Content />
+      <Sidebar />
+      <Content />
     </div>
   )
 }
