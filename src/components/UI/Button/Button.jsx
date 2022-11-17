@@ -4,7 +4,7 @@ import cl from './Button.module.css';
 
 const Button = ({children}) => {
   return (
-    <div className={cl.button}>{children}</div>
+    <div className={`${cl.button} pressable`}>{children}</div>
   )
 }
 

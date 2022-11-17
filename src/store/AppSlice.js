@@ -7,7 +7,7 @@ const AppSlice = createSlice({
     name: 'themes',
     initialState: {
         themes: [],
-        tips: {}, // structure {theme.id.toString: array of tips}
+        tips: {}, // structure map {theme.id.toString: array of tips}
         activeTheme: 0,
         activeTip: 0,
         error: {}
@@ -35,10 +35,10 @@ const AppSlice = createSlice({
             .addCase(updateThemes.rejected, (state) => {
                 state.error.message = 'Oops.. Something goes wrong..';
             })
-            .addCase(getTips.fulfilled, (state, {payload} )=>{
-                if (payload && payload.length !==0){
+            .addCase(getTips.fulfilled, (state, { payload }) => {
+                if (payload && payload.length !== 0) {
                     state.tips[state.activeTheme] = payload;
-                }else {
+                } else {
                     state.error.message = 'Oops.. Something goes wrong..';
                 }
             })
@@ -48,6 +48,6 @@ const AppSlice = createSlice({
     }
 });
 
-export const { setActiveTheme, setActiveTip } = AppSlice.actions;
+export const { setActiveTheme, setActiveTip, setError } = AppSlice.actions;
 
 export default AppSlice.reducer;

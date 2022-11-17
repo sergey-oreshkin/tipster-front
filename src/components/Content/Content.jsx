@@ -8,11 +8,11 @@ const Content = () => {
   return (
     <div>
       {
-        activeTip !== 0 
-        ? 
-        tips[activeTheme] ? tips[activeTheme].find(tip => tip.id === activeTip).text : '' 
-        : 
-        ''
+        activeTip !== 0
+          ?
+          tips[activeTheme] ? tips[activeTheme].find(tip => tip.id === activeTip).text : ''
+          :
+          ''
       }
     </div>
   )

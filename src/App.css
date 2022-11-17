@@ -25,3 +25,8 @@ body {
   /* display: flex;
   justify-content: center; */
 }
+
+.pressable:hover {
+  color:blue;
+  cursor: pointer;
+}

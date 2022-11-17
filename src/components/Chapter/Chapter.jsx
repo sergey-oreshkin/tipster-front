@@ -8,11 +8,11 @@ const Chapter = ({ theme, clickHandle }) => {
 
     return (
         <div>
-            <p onClick={() => clickHandle(theme.id, 'theme')}>{theme.title}</p>
+            <p className='pressable' onClick={() => clickHandle(theme.id, 'theme')}>{theme.title}</p>
             {
                 activeTheme === theme.id
                     ?
-                    tips[theme.id] ? tips[theme.id].map(tip => <Tip key={tip.id} tip={tip} clickHandle={clickHandle}/>):''
+                    tips[theme.id] ? tips[theme.id].map(tip => <Tip key={tip.id} tip={tip} clickHandle={clickHandle} />) : ''
                     :
                     ''
             }
