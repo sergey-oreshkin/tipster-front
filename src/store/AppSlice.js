@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import updateThemes, { createTheme } from "./API/ThemesApi";
-import getTips, { createTip } from "./API/TipApi";
+import getTips, { createTip, updateTip } from "./API/TipApi";
 
 const AppSlice = createSlice({
     name: 'themes',
@@ -76,6 +76,20 @@ const AppSlice = createSlice({
                 }
             })
             .addCase(createTip.rejected, (state) => {
+                state.message = 'Oops.. Something goes wrong..';
+            })
+            .addCase(updateTip.fulfilled, (state, { payload }) => {
+                state.message = '';
+                if (payload && payload.length !== 0) {
+                    const { tips } = state;
+                    const updated = tips[payload.theme.id].filter(t => t.id !== payload.id);
+                    updated.push(payload);
+                    state.tips[payload.theme.id] = updated;
+                } else {
+                    state.message = 'Oops.. Something goes wrong..';
+                }
+            })
+            .addCase(updateTip.rejected, (state) => {
                 state.message = 'Oops.. Something goes wrong..';
             })
     }

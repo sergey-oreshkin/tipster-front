@@ -17,7 +17,10 @@ const Main = () => {
         <ThemeForm />
       </Modal>
       <Modal name='newTip'>
-        <TipForm />
+        <TipForm type='new' />
+      </Modal>
+      <Modal name='editTip'>
+        <TipForm type='edit' />
       </Modal>
     </div>
   )

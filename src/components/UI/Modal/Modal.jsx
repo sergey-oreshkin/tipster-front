@@ -8,7 +8,7 @@ import cl from './Modal.module.css';
 const Modal = ({ children, name }) => {
     const dispatcher = useDispatch();
     const { showModal } = useSelector(state => state);
-    
+
     const classes = [cl.modal];
 
     if (showModal === name) {

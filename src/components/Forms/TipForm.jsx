@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { createTip } from '../../store/API/TipApi';
+import { createTip, updateTip } from '../../store/API/TipApi';
 import { setShowModal } from '../../store/AppSlice';
 
-const TipForm = () => {
-    const { themes } = useSelector(state => state);
+const TipForm = ({ type }) => {
+    const { themes, tips, activeTheme, activeTip } = useSelector(state => state);
     const dispatcher = useDispatch();
 
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
-    const [selectedTheme, setTheme] = useState();
+    const [selectedTheme, setTheme] = useState('');
+
+    useEffect(() => {
+        if (type === 'edit' && activeTip) {
+            const tip = tips[activeTheme].find(t => t.id === activeTip);
+            if (tip) {
+                setTheme(tip.theme.title);
+                setTitle(tip.title);
+                setText(tip.text)
+            }
+        }
+    }, [type, tips, activeTheme, activeTip]);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -20,21 +31,22 @@ const TipForm = () => {
             text: text,
             theme: theme
         }
-        dispatcher(createTip(data));
+        if (type === 'edit' && activeTip) {
+            data.id = activeTip;
+            dispatcher(updateTip(data));
+        } else {
+            dispatcher(createTip(data));
+        }
         setText('');
         setTitle('');
         setTheme('');
         dispatcher(setShowModal(''));
     }
 
-    const handleSelect = e => {
-        setTheme(e.target.value);
-    }
-
     return (
         <form>
             <label>
-                <select name='theme' value={selectedTheme} onChange={handleSelect}>
+                <select name='theme' value={selectedTheme} onChange={e => setTheme(e.target.value)}>
                     <option></option>
                     {
                         themes.map(theme => <option key={theme.id}>{theme.title}</option>)
