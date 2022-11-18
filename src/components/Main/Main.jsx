@@ -3,9 +3,10 @@ import React from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import Content from '../Content/Content';
 import Modal from '../UI/Modal/Modal';
-import NewThemeForm from '../Forms/NewThemeForm';
+import ThemeForm from '../Forms/ThemeForm';
 
 import cl from './Main.module.css';
+import TipForm from '../Forms/TipForm';
 
 const Main = () => {
   return (
@@ -13,7 +14,10 @@ const Main = () => {
       <Sidebar />
       <Content />
       <Modal name='newTheme'>
-        <NewThemeForm />
+        <ThemeForm />
+      </Modal>
+      <Modal name='newTip'>
+        <TipForm />
       </Modal>
     </div>
   )

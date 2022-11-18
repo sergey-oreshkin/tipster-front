@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { createTheme } from '../../store/API/ThemesApi';
+import { setShowModal } from '../../store/AppSlice';
 
-const NewThemeForm = () => {
+const ThemeForm = () => {
     const [title, setTitle] = useState('');
     const dispatcher = useDispatch();
 
     const handleSubmit = e => {
         e.preventDefault();
         dispatcher(createTheme(title));
+        setTitle('');
+        dispatcher(setShowModal(''));
     }
 
     return (
@@ -22,4 +25,4 @@ const NewThemeForm = () => {
 
 }
 
-export default NewThemeForm;
+export default ThemeForm;

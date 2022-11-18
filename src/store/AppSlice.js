@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import updateThemes, { createTheme } from "./API/ThemesApi";
-import getTips from "./API/TipApi";
+import getTips, { createTip } from "./API/TipApi";
 
 const AppSlice = createSlice({
     name: 'themes',
@@ -40,23 +40,42 @@ const AppSlice = createSlice({
                 state.message = 'Oops.. Something goes wrong..';
             })
             .addCase(getTips.fulfilled, (state, { payload }) => {
+                state.message = '';
                 if (payload && payload.length !== 0) {
                     state.tips[state.activeTheme] = payload;
-                } else {
-                    state.message = 'В данном разделе пока пусто.';
+                } else if (!state.tips[state.activeTheme]) {
+                    state.message = 'В этом разделе пока пусто.';
                 }
             })
             .addCase(getTips.rejected, (state) => {
                 state.message = 'Oops.. Something goes wrong..';
             })
             .addCase(createTheme.fulfilled, (state, { payload }) => {
+                state.message = '';
                 if (payload && payload.length !== 0) {
                     state.themes.push(payload);
+                    state.message = 'Раздел добавлен';
                 } else {
                     state.message = 'Oops.. Something goes wrong..';
                 }
             })
             .addCase(createTheme.rejected, (state) => {
+                state.message = 'Oops.. Something goes wrong..';
+            })
+            .addCase(createTip.fulfilled, (state, { payload }) => {
+                state.message = '';
+                if (payload && payload.length !== 0) {
+                    if (state.tips[payload.theme.id]) {
+                        state.tips[payload.theme.id].push(payload);
+                    } else {
+                        state.tips[payload.theme.id] = [payload];
+                    }
+                    state.message = 'Подсказка добавлена';
+                } else {
+                    state.message = 'Oops.. Something goes wrong..';
+                }
+            })
+            .addCase(createTip.rejected, (state) => {
                 state.message = 'Oops.. Something goes wrong..';
             })
     }

@@ -21,6 +21,27 @@ const fetchTips = async (id, rejectWithValue) => {
     }
 }
 
+export const createTip = createAsyncThunk(
+    'post/tips',
+    async (data, { rejectWithValue }) => {
+        try{
+        const config = { headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' } };
+        const uri = '/tips';
+        const endpoint = baseUrl + uri;
+        const response = await axios.post(endpoint, JSON.stringify(data), config);
+        return response.data;
+        } catch (err){
+            if (err.isAxiosError) {
+                if (err.response.status !== 0) {
+                    return rejectWithValue({ data: err.response.data, status: err.response.status });
+                }
+                return rejectWithValue({ error: 'Сервер не доступен!' });
+            }
+            return rejectWithValue({ error: 'Неизвестная ошибка ' + err });
+        }
+    }
+);
+
 const getTips = createAsyncThunk(
     'get/tips',
     async (id, { rejectWithValue, getState }) => {

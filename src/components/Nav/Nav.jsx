@@ -16,7 +16,7 @@ const Nav = () => {
 
     return (
         <div className={cl.nav}>
-            <Button clickHandler={clickHandler} name='edit'>Редактировать</Button>
+            <Button clickHandler={clickHandler} name='editTip'>Редактировать</Button>
             <Button clickHandler={clickHandler} name='newTip'>Новая подсказка</Button>
             <Button clickHandler={clickHandler} name='newTheme'>Новый раздел</Button>
         </div>
