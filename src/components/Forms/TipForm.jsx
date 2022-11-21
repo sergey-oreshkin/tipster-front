@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { createTip, updateTip } from '../../store/API/TipApi';
+import { createTip, updateTip } from '../../store/API/TipsApi';
 import { setShowModal } from '../../store/AppSlice';
 
 const TipForm = ({ type }) => {
-    const { themes, tips, activeTheme, activeTip } = useSelector(state => state);
+    const { themes, tips, activeTip } = useSelector(state => state);
     const dispatcher = useDispatch();
 
     const [title, setTitle] = useState('');
@@ -13,14 +13,14 @@ const TipForm = ({ type }) => {
 
     useEffect(() => {
         if (type === 'edit' && activeTip) {
-            const tip = tips[activeTheme].find(t => t.id === activeTip);
+            const tip = tips.find(t => t.id === activeTip);
             if (tip) {
                 setTheme(tip.theme.title);
                 setTitle(tip.title);
                 setText(tip.text)
             }
         }
-    }, [type, tips, activeTheme, activeTip]);
+    }, [type, tips, activeTip]);
 
     const handleSubmit = e => {
         e.preventDefault();

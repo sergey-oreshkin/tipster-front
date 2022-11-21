@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   version: 0.1.0
   title: Tipster project API
-  description: a service that will help you prepare for an interview, successfully pass an interview and get a job
+  description: The service that will help you prepare for an interview, successfully pass an interview and get a job
   contact:
     email: oreshkin.sv@yandex.ru
     name: Sergey Oreshkin
@@ -126,7 +126,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorDto'
         '404':
-          description: Tips with the id not found
+          description: Tip with the id not found
           content:
             application/json:
               schema:

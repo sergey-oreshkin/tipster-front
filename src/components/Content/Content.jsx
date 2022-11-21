@@ -5,7 +5,7 @@ import cl from './Content.module.css';
 
 const Content = () => {
 
-  const { activeTip, activeTheme, tips } = useSelector(state => state);
+  const { activeTip, tips } = useSelector(state => state);
 
   return (
     <div className={cl.content}>
@@ -13,7 +13,7 @@ const Content = () => {
         {
           activeTip !== 0
             ?
-            tips[activeTheme] ? tips[activeTheme].find(tip => tip.id === activeTip).text : ''
+            tips ? tips.find(tip => tip.id === activeTip).text : ''
             :
             ''
         }

@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import updateThemes, { createTheme } from "./API/ThemesApi";
-import getTips, { createTip, updateTip } from "./API/TipApi";
+import getTips, { createTip, updateTip } from "./API/TipsApi";
 
 const AppSlice = createSlice({
     name: 'themes',
     initialState: {
         themes: [],
-        tips: {}, // structure map {theme.id.toString: array of tips}
+        tips: [],
         activeTheme: 0,
         activeTip: 0,
         showModal: '',
@@ -42,8 +42,8 @@ const AppSlice = createSlice({
             .addCase(getTips.fulfilled, (state, { payload }) => {
                 state.message = '';
                 if (payload && payload.length !== 0) {
-                    state.tips[state.activeTheme] = payload;
-                } else if (!state.tips[state.activeTheme]) {
+                    state.tips = payload;
+                } else if (!state.tips.filter(tip=>tip.theme.id === state.activeTheme)) {
                     state.message = 'В этом разделе пока пусто.';
                 }
             })
@@ -65,11 +65,7 @@ const AppSlice = createSlice({
             .addCase(createTip.fulfilled, (state, { payload }) => {
                 state.message = '';
                 if (payload && payload.length !== 0) {
-                    if (state.tips[payload.theme.id]) {
-                        state.tips[payload.theme.id].push(payload);
-                    } else {
-                        state.tips[payload.theme.id] = [payload];
-                    }
+                    state.tips.push(payload);
                     state.message = 'Подсказка добавлена';
                 } else {
                     state.message = 'Oops.. Something goes wrong..';
@@ -82,9 +78,9 @@ const AppSlice = createSlice({
                 state.message = '';
                 if (payload && payload.length !== 0) {
                     const { tips } = state;
-                    const updated = tips[payload.theme.id].filter(t => t.id !== payload.id);
+                    const updated = tips.filter(t => t.id !== payload.id);
                     updated.push(payload);
-                    state.tips[payload.theme.id] = updated;
+                    state.tips = updated;
                 } else {
                     state.message = 'Oops.. Something goes wrong..';
                 }
