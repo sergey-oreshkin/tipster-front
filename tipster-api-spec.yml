@@ -101,7 +101,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorDto'
-    patch:
+    put:
       tags:
         - Tips
       summary: Update an existing tip
@@ -110,7 +110,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateTipDto'
+              $ref: '#/components/schemas/TipDto'
         required: true 
       responses:
         '200': 
@@ -226,27 +226,6 @@ paths:
       
 components:
   schemas:
-    UpdateTipDto:
-      required:
-        - id
-      type: object
-      properties: 
-        id:
-          type: integer
-          format: int64
-        title:
-          type: string
-          description: title of tip
-          example: method clone()
-        text:
-          type: string
-          description: Content part of tip
-          example: To use the method you have to implement Cloneable and override the method in your class
-        theme:
-          type: object
-          properties:
-            title:
-              type: string
     TipDto:
       required:
         - title
