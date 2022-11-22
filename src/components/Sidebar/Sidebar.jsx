@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import updateThemes from '../../store/API/ThemesApi';
-import getTips from '../../store/API/TipApi';
+import getTips from '../../store/API/TipsApi';
 import { setActiveTheme, setActiveTip } from '../../store/AppSlice';
 
 import Chapter from '../Chapter/Chapter';

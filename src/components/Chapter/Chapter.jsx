@@ -12,7 +12,7 @@ const Chapter = ({ theme, clickHandle }) => {
             {
                 activeTheme === theme.id
                     ?
-                    tips[theme.id] ? tips[theme.id].map(tip => <Tip key={tip.id} tip={tip} clickHandle={clickHandle} />) : ''
+                    tips && tips.filter(tip => tip.theme.id === activeTheme).map(tip => <Tip key={tip.id} tip={tip} clickHandle={clickHandle} />)
                     :
                     ''
             }

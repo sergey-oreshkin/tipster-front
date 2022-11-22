@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   version: 0.1.0
   title: Tipster project API
-  description: a service that will help you prepare for an interview, successfully pass an interview and get a job
+  description: The service that will help you prepare for an interview, successfully pass an interview and get a job
   contact:
     email: oreshkin.sv@yandex.ru
     name: Sergey Oreshkin
@@ -17,53 +17,53 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ThemesDto'
-        required: true 
+              $ref: "#/components/schemas/ThemesDto"
+        required: true
       responses:
-        '200': 
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ThemesDto'  
-        '400': 
+                $ref: "#/components/schemas/ThemesDto"
+        "400":
           description: Validation exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '409':
+                $ref: "#/components/schemas/ErrorDto"
+        "409":
           description: Conflict of ununique titles
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '403':
+                $ref: "#/components/schemas/ErrorDto"
+        "403":
           description: Authorization exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
+                $ref: "#/components/schemas/ErrorDto"
     get:
       tags:
         - Themes
       summary: Get list of all themes
       description: Only for authorized users
-      responses: 
-        '200': 
+      responses:
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/ThemesDto'
-        '403':
+                  $ref: "#/components/schemas/ThemesDto"
+        "403":
           description: Authorization exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
+                $ref: "#/components/schemas/ErrorDto"
   /tips:
     post:
       tags:
@@ -74,34 +74,34 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/TipDto'
-        required: true 
+              $ref: "#/components/schemas/TipDto"
+        required: true
       responses:
-        '200': 
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TipDto'  
-        '400': 
+                $ref: "#/components/schemas/TipDto"
+        "400":
           description: Validation exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '409':
+                $ref: "#/components/schemas/ErrorDto"
+        "409":
           description: Conflict of ununique titles
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '403':
+                $ref: "#/components/schemas/ErrorDto"
+        "403":
           description: Authorization exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-    patch:
+                $ref: "#/components/schemas/ErrorDto"
+    put:
       tags:
         - Tips
       summary: Update an existing tip
@@ -110,39 +110,39 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateTipDto'
-        required: true 
+              $ref: "#/components/schemas/TipDto"
+        required: true
       responses:
-        '200': 
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TipDto'  
-        '400': 
+                $ref: "#/components/schemas/TipDto"
+        "400":
           description: Validation exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '404':
-          description: Tips with the id not found
+                $ref: "#/components/schemas/ErrorDto"
+        "404":
+          description: Tip with the id not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '409':
+                $ref: "#/components/schemas/ErrorDto"
+        "409":
           description: Conflict of ununique titles
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '403':
+                $ref: "#/components/schemas/ErrorDto"
+        "403":
           description: Authorization exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
+                $ref: "#/components/schemas/ErrorDto"
     get:
       tags:
         - Tips
@@ -157,33 +157,33 @@ paths:
             type: integer
             format: int64
       responses:
-        '200': 
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/TipDto'  
-        '400': 
+                  $ref: "#/components/schemas/TipDto"
+        "400":
           description: Validation exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '404':
+                $ref: "#/components/schemas/ErrorDto"
+        "404":
           description: Theme with the ID not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '403':
+                $ref: "#/components/schemas/ErrorDto"
+        "403":
           description: Authorization exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-      
+                $ref: "#/components/schemas/ErrorDto"
+
   /tips/{tipId}:
     get:
       tags:
@@ -199,61 +199,40 @@ paths:
             type: integer
             format: int64
       responses:
-        '200': 
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TipDto'  
-        '400': 
+                $ref: "#/components/schemas/TipDto"
+        "400":
           description: Validation exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '404':
+                $ref: "#/components/schemas/ErrorDto"
+        "404":
           description: Tips with the ID not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-        '403':
+                $ref: "#/components/schemas/ErrorDto"
+        "403":
           description: Authorization exception
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorDto'
-      
+                $ref: "#/components/schemas/ErrorDto"
+
 components:
   schemas:
-    UpdateTipDto:
-      required:
-        - id
-      type: object
-      properties: 
-        id:
-          type: integer
-          format: int64
-        title:
-          type: string
-          description: title of tip
-          example: method clone()
-        text:
-          type: string
-          description: Content part of tip
-          example: To use the method you have to implement Cloneable and override the method in your class
-        theme:
-          type: object
-          properties:
-            title:
-              type: string
     TipDto:
       required:
         - title
         - text
         - theme
       type: object
-      properties: 
+      properties:
         id:
           type: integer
           format: int64
@@ -268,8 +247,9 @@ components:
         theme:
           type: object
           properties:
-            title:
-              type: string
+            id:
+              type: integer
+              format: int64
     ThemesDto:
       required:
         - title

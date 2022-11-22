@@ -1,0 +1,12 @@
+.content {
+    display: inline-block;
+    width: 78%;
+    height: 100%;
+    padding: 5px 50px;
+    overflow-y: scroll;
+}
+
+.content div {
+    margin: 0 auto;
+    max-width: 800px;
+}
