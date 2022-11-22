@@ -9,6 +9,7 @@ const Content = () => {
 
   return (
     <div className={cl.content}>
+
       <div>
         {
           activeTip !== 0

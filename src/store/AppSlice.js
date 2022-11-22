@@ -43,7 +43,7 @@ const AppSlice = createSlice({
                 state.message = '';
                 if (payload && payload.length !== 0) {
                     state.tips = payload;
-                } else if (!state.tips.filter(tip=>tip.theme.id === state.activeTheme)) {
+                } else if (!state.tips.filter(tip => tip.theme.id === state.activeTheme)) {
                     state.message = 'В этом разделе пока пусто.';
                 }
             })

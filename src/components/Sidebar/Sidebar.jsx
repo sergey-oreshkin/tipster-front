@@ -25,7 +25,7 @@ const Sidebar = () => {
       dispatch(getTips(id));
     }
   }
-  
+
   return (
     <div className={cl.sidebar}>
       {themes.map(theme => <Chapter key={theme.id} theme={theme} clickHandle={clickHandle} />)}
