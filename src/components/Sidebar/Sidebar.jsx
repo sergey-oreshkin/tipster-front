@@ -5,7 +5,7 @@ import updateThemes from '../../store/API/ThemesApi';
 import getTips from '../../store/API/TipsApi';
 import { setActiveTheme, setActiveTip } from '../../store/AppSlice';
 
-import Chapter from '../Chapter/Chapter';
+import Theme from '../Theme/Theme';
 
 import cl from './Sidebar.module.css';
 
@@ -28,7 +28,7 @@ const Sidebar = () => {
 
   return (
     <div className={cl.sidebar}>
-      {themes.map(theme => <Chapter key={theme.id} theme={theme} clickHandle={clickHandle} />)}
+      {themes.map(theme => <Theme key={theme.id} theme={theme} clickHandle={clickHandle} />)}
     </div>
   )
 }

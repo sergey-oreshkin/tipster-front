@@ -7,8 +7,8 @@ import Notification from './components/Notification/Notification';
 function App() {
   return (
     <div className="App">
-      <Header />
       <Notification />
+      <Header />
       <Main />
     </div>
   );

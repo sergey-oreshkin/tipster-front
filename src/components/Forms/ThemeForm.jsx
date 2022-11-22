@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { createTheme } from '../../store/API/ThemesApi';
 import { setShowModal } from '../../store/AppSlice';
 
+import cl from './Form.module.css';
+
 const ThemeForm = () => {
     const [title, setTitle] = useState('');
     const dispatcher = useDispatch();
@@ -16,10 +18,9 @@ const ThemeForm = () => {
     }
 
     return (
-        <form>
-            <label htmlFor='title'>Название темы</label>
-            <input name='title' type="text" onChange={e => setTitle(e.target.value)} value={title} />
-            <input type="submit" onClick={handleSubmit} />
+        <form className={cl.form}>
+            <input name='title' type="text" onChange={e => setTitle(e.target.value)} value={title} placeholder='Название раздела' />
+            <input type="submit" onClick={handleSubmit} value='Создать' />
         </form>
     )
 

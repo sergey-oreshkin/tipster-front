@@ -1,12 +1,12 @@
 .content {
-    display: inline-block;
-    width: 78%;
-    height: 100%;
-    padding: 5px 50px;
-    overflow-y: scroll;
+    position: fixed;
+    left: 300px;
+    width: calc(100vw - 340px);
+    height: calc(100vh - 100px);
+    white-space: pre-line;
 }
 
 .content div {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
 }

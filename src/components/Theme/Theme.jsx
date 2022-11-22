@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux';
 
 import Tip from '../Tip/Tip';
 
-const Chapter = ({ theme, clickHandle }) => {
+const Theme = ({ theme, clickHandle }) => {
     const { activeTheme, tips } = useSelector(state => state);
 
     return (
         <div>
-            <p className='pressable' onClick={() => clickHandle(theme.id, 'theme')}>{theme.title}</p>
+            <p className='pressable' style={{ fontWeight: 'bold' }} onClick={() => clickHandle(theme.id, 'theme')}>{theme.title}</p>
             {
                 activeTheme === theme.id
                     ?
@@ -20,4 +20,4 @@ const Chapter = ({ theme, clickHandle }) => {
     )
 }
 
-export default Chapter;
+export default Theme;
