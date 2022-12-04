@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { createTip, updateTip } from '../../store/API/TipsApi';
 import { setShowModal } from '../../store/AppSlice';
+
+import cl from './Form.module.css';
 
 const TipForm = ({ type }) => {
     const { themes, tips, activeTip } = useSelector(state => state);
@@ -44,20 +47,20 @@ const TipForm = ({ type }) => {
     }
 
     return (
-        <form>
-            <label>
+        <form className={cl.form}>
+            <p style={{ color: '#999' }}>Раздел
                 <select name='theme' value={selectedTheme} onChange={e => setTheme(e.target.value)}>
                     <option></option>
                     {
                         themes.map(theme => <option key={theme.id}>{theme.title}</option>)
                     }
                 </select>
-            </label>
-            <label htmlFor='title'>Заголовок</label>
-            <input name='title' type="text" onChange={e => setTitle(e.target.value)} value={title} />
-            <label htmlFor='text'>Текст</label>
-            <textarea name='text' cols='100' rows='30' onChange={e => setText(e.target.value)} value={text}></textarea>
-            <input type="submit" onClick={handleSubmit} />
+            </p>
+            <p style={{ color: '#999' }}>Заголовок
+                <input name='title' type="text" onChange={e => setTitle(e.target.value)} value={title} placeholder='Введите название' />
+            </p>
+            <textarea name='text' rows='25' cols='60' onChange={e => setText(e.target.value)} value={text} placeholder='Введите текст'></textarea>
+            <input type="submit" onClick={handleSubmit} value='Создать' />
         </form>
     )
 

@@ -1,4 +1,7 @@
 .title {
     margin-left: 20px;
-    font-weight: bold;
+}
+
+.title:hover{
+    background-color: #ccc;
 }

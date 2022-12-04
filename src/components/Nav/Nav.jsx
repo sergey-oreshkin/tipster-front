@@ -13,7 +13,7 @@ const Nav = () => {
 
     const clickHandler = (name) => {
         if (name === 'editTip') {
-            if (!activeTheme && !activeTip) {
+            if (!activeTheme || !activeTip) {
                 return;
             }
         }
