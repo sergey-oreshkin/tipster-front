@@ -245,11 +245,8 @@ components:
           description: Content part of tip
           example: To use the method you have to implement Cloneable and override the method in your class
         theme:
-          type: object
-          properties:
-            id:
-              type: integer
-              format: int64
+          type: integer
+          format: int64
     ThemesDto:
       required:
         - title

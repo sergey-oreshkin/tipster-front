@@ -12,7 +12,7 @@ const Theme = ({ theme, clickHandle }) => {
             {
                 activeTheme === theme.id
                     ?
-                    tips && tips.filter(tip => tip.theme.id === activeTheme).map(tip => <Tip key={tip.id} tip={tip} clickHandle={clickHandle} />)
+                    tips && tips.filter(tip => tip.theme === activeTheme).map(tip => <Tip key={tip.id} tip={tip} clickHandle={clickHandle} />)
                     :
                     ''
             }

@@ -18,12 +18,12 @@ const TipForm = ({ type }) => {
         if (type === 'edit' && activeTip) {
             const tip = tips.find(t => t.id === activeTip);
             if (tip) {
-                setTheme(tip.theme.title);
+                setTheme(themes.find(theme => theme.id === tip.theme).title);
                 setTitle(tip.title);
                 setText(tip.text)
             }
         }
-    }, [type, tips, activeTip]);
+    }, [type, themes, tips, activeTip]);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -32,7 +32,7 @@ const TipForm = ({ type }) => {
         const data = {
             title: title,
             text: text,
-            theme: theme
+            theme: theme.id
         }
         if (type === 'edit' && activeTip) {
             data.id = activeTip;
