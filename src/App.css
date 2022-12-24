@@ -1,30 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  height: 100%;
-  font-size: 16px;
-}
-
-#root {
-  margin: auto;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.App {
+.App{
+  font-family: 'Open Sans', Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  min-width: 320px;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100vw;
 }
 
-.pressable:hover {
-  text-shadow: 1px 1px #555;
-  cursor: pointer;
-}

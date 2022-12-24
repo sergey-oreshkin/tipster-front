@@ -1,10 +1,10 @@
 import React from "react";
-import cl from './Logo.module.css';
+//import cl from './Logo.module.css';
 
 const Logo = () => {
     return (
-        <div className={cl.logo}>
-            <h2>Типстер</h2>
+        <div className='logo'>
+            <div className='logo__picture'/>
         </div>
     )
 }

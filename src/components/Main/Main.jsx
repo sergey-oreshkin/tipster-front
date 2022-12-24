@@ -4,13 +4,27 @@ import Sidebar from '../Sidebar/Sidebar';
 import Content from '../Content/Content';
 import Modal from '../UI/Modal/Modal';
 import ThemeForm from '../Forms/ThemeForm';
+import Notification from '../Notification/Notification';
+import Header from '../Header/Header';
+import Promo from '../Promo/Promo';
+import Footer from '../Footer/Footer'
 
-import cl from './Main.module.css';
+//import cl from './Main.module.css';
 import TipForm from '../Forms/TipForm';
 
-const Main = () => {
+const Main = ({isEntrance}) => {
+
   return (
-    <div className={cl.main}>
+    <div className='main'>
+      <Header isEntrance={isEntrance}/>
+      <main>
+        <Promo />
+        {/*<AboutProject />
+        <AboutUs />*/}
+      </main>
+      <Footer />
+      {/*<Notification />
+      <Header />
       <Sidebar />
       <Content />
       <Modal name='newTheme'>
@@ -21,7 +35,7 @@ const Main = () => {
       </Modal>
       <Modal name='editTip'>
         <TipForm type='edit' />
-      </Modal>
+      </Modal>*/}
     </div>
   )
 }
