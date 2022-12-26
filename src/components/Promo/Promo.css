@@ -19,7 +19,7 @@
   font-weight: 700;
   font-size: 50px;
   line-height: 58px;
-  color: #000000;
+  color: #09005D;
   max-width: 640px;
   text-align: left;
   padding: 0;
@@ -44,6 +44,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  color: #09005D;
 }
 
 .typed-cursor {
@@ -66,7 +67,7 @@
 
 .promo__button {
   /*opacity: 0.6;*/
-  border: 1px solid #000000;
+  border: 1px solid #09005D;
   border-radius: 3px;
   width: 129px;
   height: 36px;
@@ -74,7 +75,7 @@
   cursor: pointer;
   padding: 0;
   margin-bottom: 75px;
-  color: #000000;
+  color: #09005D;
   margin-top: 140px;
 }
 
@@ -85,6 +86,7 @@
   display: block;
   padding: 10px 20px;
   text-align: center;
+  color: #09005D
 }
 
 @keyframes typedjsBlink {
