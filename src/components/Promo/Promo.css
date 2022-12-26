@@ -1,14 +1,13 @@
 .promo {
   width: 100%;
   box-sizing: border-box;
-  background: #f8f8f8;
+  background: #edf2f7;
 }
 
 .promo__picture {
-  width: 450px;
+  width: 600px;
   margin: 85px 0;
-  border-radius: 3px;
-  height: 450px;
+  border-radius: 10px;
 }
 
 .promo__container{
@@ -17,7 +16,7 @@
 }
 
 .promo__title {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 50px;
   line-height: 58px;
   color: #000000;
@@ -31,7 +30,7 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 38px;
-  color: #005cff;;
+  color: #5686e3;
   mix-blend-mode: normal;
   /*opacity: 0.5;*/
   padding: 0;
@@ -40,8 +39,11 @@
 }
 
 .promo__text{
-  max-width: 440px;
+  max-width: 340px;
   margin-top: 75px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .typed-cursor {

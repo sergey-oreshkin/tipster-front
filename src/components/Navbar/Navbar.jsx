@@ -34,8 +34,8 @@ const Navbar = ({isEntrance}) => {
         <>
           <nav className="navigation__button-container">
           <ul className="navigation__button-list">
+            <li className="navigation__button-item navigation__item"><Link to='/notes' className="navigation__button-link link">Конспекты</Link></li>
             <li className="navigation__button-item navigation__item navigation__item-profile"><Link to='/profile' className="navigation__link navigation__link_profile link">Аккаунт</Link></li>
-            <li className="navigation__button-item"><Link to='/signup' className="navigation__button-link link">Выйти</Link></li>
           </ul>
           </nav>
         </>

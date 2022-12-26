@@ -1,4 +1,4 @@
-import promoPicture from '../../images/4002785.jpg';
+import promoPicture from '../../images/promo.jpg';
 import { Link} from 'react-router-dom';
 import { useRef, useEffect } from "react";
 import Typed from "typed.js";
@@ -45,7 +45,7 @@ const Promo = () => {
             <div className="promo__subtitle-container">
               <span className="promo__subtitle" ref={el} />
             </div>
-            <p className="promo__text">{`Cервис для тех, кто хочет систематизировать знания, хранить все заметки в одном месте и\u00A0получить работу мечты.`}</p>
+            <p className="promo__text">{`Систематизируйте знания в IT, храните все конспекты в одном месте и\u00A0получите работу мечты.`}</p>
             <div className="promo__button button"><Link to="/signin" className="promo__link button link">Попробовать</Link></div>
           </div>
           <img className='promo__picture' alt="иллюстрация c программистом за работой." src={promoPicture}/>

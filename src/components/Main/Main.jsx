@@ -7,7 +7,8 @@ import ThemeForm from '../Forms/ThemeForm';
 import Notification from '../Notification/Notification';
 import Header from '../Header/Header';
 import Promo from '../Promo/Promo';
-import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer';
+import AboutProject from '../AboutProject/AboutProject'
 
 //import cl from './Main.module.css';
 import TipForm from '../Forms/TipForm';
@@ -19,8 +20,9 @@ const Main = ({isEntrance}) => {
       <Header isEntrance={isEntrance}/>
       <main>
         <Promo />
-        {/*<AboutProject />
-        <AboutUs />*/}
+        <AboutProject />
+        {/*//как это работает
+        <AboutUs /> //команда проекта */}
       </main>
       <Footer />
       {/*<Notification />
