@@ -27,7 +27,7 @@ const Navbar = ({isEntrance}) => {
         <nav className="navigation__button-container">
           <ul className="navigation__button-list">
             <li className="navigation__button-item"><Link to='/signup' className="navigation__button-link link">Регистрация</Link></li>
-            <li className="navigation__button-item"><Link to='/signin' className="navigation__button-link navigation__button-link_black link button">Войти</Link></li>
+            <li className="navigation__button-item"><Link to='/signin' className="navigation__button-link navigation__button-link_color link button">Войти</Link></li>
           </ul>
         </nav>
       ) : (

@@ -33,7 +33,7 @@
   border-radius: 40px;
   padding: 9.5px 33px 9.5px 11px;
   box-sizing: border-box;
-  color: #09005D
+  color: #292929;
 }
 
 .navigation__link_profile::after {
@@ -63,11 +63,11 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  color: #09005D;
+  color: #292929;
 }
 
-.navigation__button-link_black {
-  background: #000000;
+.navigation__button-link_color {
+  background: #FE7C6F;
   border-radius: 3px;
   padding: 9px 20px;
   color: #FFFFFF;

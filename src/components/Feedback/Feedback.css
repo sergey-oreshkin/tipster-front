@@ -1,0 +1,44 @@
+.feedback {
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffff;
+}
+
+.feedback__section {
+  display: flex;
+  justify-content: flex-start;
+  padding: 75px 70px 0;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.feedback__picture{
+  width: 50%;
+}
+
+.feedback__button{
+  border: none;
+  margin-left: 0;
+  margin-top: 55px;
+}
+
+.feedback__title{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  margin: 0 auto;
+  padding: 0 0 35px 0;
+  color: #292929;
+}
+
+.feedback__subtitle{
+  max-width: 540px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #292929;
+}
+
+.feedback__box{
+}

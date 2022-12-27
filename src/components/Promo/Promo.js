@@ -48,7 +48,7 @@ const Promo = () => {
             <p className="promo__text">{`Систематизируйте знания в IT, храните все конспекты в одном месте и\u00A0получите работу мечты.`}</p>
             <div className="promo__button button"><Link to="/signin" className="promo__link button link">Попробовать</Link></div>
           </div>
-          <img className='promo__picture' alt="иллюстрация c программистом за работой." src={promoPicture}/>
+          <img className='promo__picture' alt="иллюстрация c лупой и открытыми вкладками на компьютере." src={promoPicture}/>
         </div>
       </section>
     )

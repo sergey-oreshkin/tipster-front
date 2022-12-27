@@ -1,15 +1,14 @@
 .about-project__card{
   width: 260px;
-  background: #edf2f7;
+  background: #ffff;
   border-radius: 10px;
   padding: 20px;
-  color: #09005D
+  color: #292929
 }
 
 .about-project__subtitle{
   font-weight: 400;
   font-size: 16px;
-  line-height: 16px;
 }
 
 .about-project__picture{

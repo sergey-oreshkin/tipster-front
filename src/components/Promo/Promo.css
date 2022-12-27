@@ -1,7 +1,7 @@
 .promo {
   width: 100%;
   box-sizing: border-box;
-  background: #edf2f7;
+  background: #ffff;
 }
 
 .promo__picture {
@@ -43,8 +43,7 @@
   margin-top: 75px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 16px;
-  color: #09005D;
+  color: #292929;
 }
 
 .typed-cursor {
@@ -66,17 +65,15 @@
 }
 
 .promo__button {
-  /*opacity: 0.6;*/
-  border: 1px solid #09005D;
+  border: 1px solid #292929;
   border-radius: 3px;
   width: 129px;
   height: 36px;
   background-color: transparent;
   cursor: pointer;
   padding: 0;
-  margin-bottom: 75px;
-  color: #09005D;
-  margin-top: 140px;
+  color: #292929;
+  margin-top: 30px;
 }
 
 .promo__link {
@@ -86,7 +83,7 @@
   display: block;
   padding: 10px 20px;
   text-align: center;
-  color: #09005D
+  color: #292929;
 }
 
 @keyframes typedjsBlink {
