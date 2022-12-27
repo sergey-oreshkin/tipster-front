@@ -10,8 +10,11 @@
 }
 
 .logo__picture {
-  width: 60px;
+  width: 150px;
   height: 60px;
-  background: #5686e3;
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../images/logo3.png);
+  margin-left: -15px;
 }
