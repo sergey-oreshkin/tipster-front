@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutProjectCard = ({title, about,picture}) => {
+const AboutProjectCard = ({title, about, picture}) => {
 
     return (
     <article className='about-project__card'>

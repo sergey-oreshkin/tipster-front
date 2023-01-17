@@ -27,12 +27,6 @@ function App() {
           <h2>profile</h2>
         </ProtectedRoute>
 
-        <Route path='/signup'>
-          {!loggedIn ? (<h2>Register</h2>
-          ) : (
-          <Redirect to='/'/>)}
-        </Route>
-
         <Route path='/signin'>
           {!loggedIn ? (<h2>Login</h2>
           ) : (

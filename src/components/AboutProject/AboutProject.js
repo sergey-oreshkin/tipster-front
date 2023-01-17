@@ -4,7 +4,7 @@ import AboutProjectCard from "../AboutProjectCard/AboutProjectCard";
 const AboutProject = () => {
 
     return (
-      <section className='about-project'>
+      <section className='about-project' id="about-project">
         <div className='about-project__section'>
           <h2 className='about-project__title'>Как пользоваться сервисом</h2>
           <div className='about-project__container'>
