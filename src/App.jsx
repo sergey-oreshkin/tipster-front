@@ -3,10 +3,12 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import Main from './components/Main/Main';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Notes from './components/Notes/Notes';
 
 function App() {
 
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   return (
     <div className="App">
@@ -19,12 +21,14 @@ function App() {
 
         <ProtectedRoute path='/notes'loggedIn={loggedIn} >
           <Header isEntrance={loggedIn} />
-          <h2>карточки</h2>
+          <Notes />
+          <Footer />
         </ProtectedRoute>
 
         <ProtectedRoute path='/profile' loggedIn={loggedIn} >
           <Header isEntrance={loggedIn}/>
           <h2>profile</h2>
+          <Footer />
         </ProtectedRoute>
 
         <Route path='/signin'>
