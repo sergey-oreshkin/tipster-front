@@ -13,8 +13,10 @@
 @import url(../components/AboutProjectCard/AboutProjectCard.css);
 @import url(../components/Feedback/Feedback.css);
 @import url(../components/Notes/Notes.css);
-@import url(../components/NotesList/NotesList.css);
 @import url(../components/Note/Note.css);
+@import url(../components/Theme/Theme.css);
+@import url(../components/ThemeList/ThemeList.css);
+@import url(../components/HeadlineNavbar/HeadlineNavbar.css);
 
 
 

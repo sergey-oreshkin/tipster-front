@@ -1,0 +1,12 @@
+.notes{
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffff;
+}
+
+.notes__section{
+  padding: 70px 70px 0;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}

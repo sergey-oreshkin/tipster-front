@@ -1,0 +1,30 @@
+.headline-navbar__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.headline-navbar__title{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.headline-navbar{
+  margin: 30px 0;
+}
+
+.headline-navbar__item{
+  cursor: pointer;
+  max-width: 300px;
+}

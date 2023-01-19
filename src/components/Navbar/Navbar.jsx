@@ -1,7 +1,12 @@
 import React from "react";
-import { Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = ({isEntrance}) => {
+
+  const location = useLocation();
+
+  console.log(location.pathname)
 
     return (
       <>
@@ -16,8 +21,17 @@ const Navbar = ({isEntrance}) => {
         <>
           <nav className="navigation__button-container">
           <ul className="navigation__button-list">
+          {location.pathname === '/notes' ? (
+            <>
+             <li className="navigation__button-item navigation__item"><button to='/notes' className="navigation__button-link link notes-button">Создать тему</button></li>
+             <li className="navigation__button-item navigation__item"><button to='/notes' className="navigation__button-link link notes-button">Добавить заметку</button></li>
+             <li className="navigation__button-item navigation__item navigation__item-profile"><Link to='/profile' className="navigation__link navigation__link_profile link">Аккаунт</Link></li>
+            </>
+          ) : (
+          <>
             <li className="navigation__button-item navigation__item"><Link to='/notes' className="navigation__button-link link">Конспекты</Link></li>
             <li className="navigation__button-item navigation__item navigation__item-profile"><Link to='/profile' className="navigation__link navigation__link_profile link">Аккаунт</Link></li>
+          </>)}
           </ul>
           </nav>
         </>

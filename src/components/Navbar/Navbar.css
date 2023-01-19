@@ -72,3 +72,8 @@
   padding: 9px 20px;
   color: #FFFFFF;
 }
+
+.notes-button{
+  background-color: transparent;
+  border: none;
+}

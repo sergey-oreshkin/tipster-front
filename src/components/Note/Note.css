@@ -1,0 +1,35 @@
+.note{
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  padding: 20px;
+  position: relative;
+}
+
+.note__title{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.note__text{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.note__edit-icon{
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
+  background-image: url('../../images/edit_button.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.note:hover .note__edit-icon {
+  display: block;
+}
