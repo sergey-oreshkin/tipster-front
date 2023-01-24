@@ -1,16 +1,16 @@
 import React from "react";
 
 import Logo from "../Logo/Logo";
-import Nav from "../Nav/Nav";
+import Navbar from "../Navbar/Navbar";
 
-import cl from './Header.module.css';
-
-const Header = () => {
+const Header = ({isEntrance}) => {
     return (
-        <header className={cl.header}>
-            <Logo />
-            <Nav />
-        </header>
+    <header className='header'>
+      <div  className='header__section'>
+        <Logo />
+        <Navbar isEntrance={isEntrance}/>
+      </div>
+    </header>
     )
 }
 

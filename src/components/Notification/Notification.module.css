@@ -1,8 +1,0 @@
-.notification{
-    text-align: center;
-    display: none;
-}
-
-.notification.active {
-    display: block;
-}

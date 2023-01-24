@@ -1,0 +1,27 @@
+.about-project{
+  width: 100%;
+  box-sizing: border-box;
+  background: #edf2f7;
+}
+
+.about-project__section {
+  padding: 75px 70px;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.about-project__title{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  margin: 0;
+  padding: 0 0 55px 0;
+  color: #292929;
+}
+
+.about-project__container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

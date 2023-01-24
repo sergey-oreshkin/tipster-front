@@ -1,0 +1,13 @@
+.header__section {
+  display: flex;
+  width: 100%;
+  padding: 18px 70px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.header{
+  background: #ffff;
+}

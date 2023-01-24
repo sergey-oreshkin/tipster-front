@@ -1,0 +1,45 @@
+.about-project__card{
+  width: 260px;
+  background: #ffff;
+  border-radius: 10px;
+  padding: 20px;
+  color: #292929
+}
+
+.about-project__subtitle{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.about-project__picture{
+  margin: 0 auto 20px;
+  width: 220px;
+  height: 220px;
+  background: #ffff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+}
+
+.about-project__picture_1{
+  background-image: url(../../images/aboutproject1.jpg);
+}
+
+.about-project__picture_2{
+  background-image: url(../../images/aboutproject.jpg);
+}
+
+.about-project__picture_3{
+  background-image: url(../../images/aboutproject3.jpg);
+}
+
+.about-project__picture_4{
+  background-image: url(../../images/aboutproject4.jpg);
+}
+
+.about-project__headline{
+  margin: 45px 0 15px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
