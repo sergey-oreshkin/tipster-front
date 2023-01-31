@@ -1,13 +1,15 @@
-import {useState} from 'react';
-import {Route, Switch, Redirect} from 'react-router-dom';
+import { useState } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Main from './components/Main/Main';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import LoginPage from './components/LoginPage/LoginPage';
+import Authorization from './components/Authorization/Authorization';
 
 function App() {
 
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <div className="App">
@@ -19,15 +21,22 @@ function App() {
         </Route>
 
         <ProtectedRoute path='/profile' loggedIn={loggedIn} >
-          <Header isEntrance={loggedIn}/>
+          <Header isEntrance={loggedIn} />
           <h2>profile</h2>
           <Footer />
         </ProtectedRoute>
 
         <Route path='/signin'>
-          {!loggedIn ? (<h2>Login</h2>
-          ) : (
-          <Redirect to='/'/> )}
+          {!loggedIn
+            ?
+            <LoginPage />
+            :
+            <Redirect to='/' />
+          }
+        </Route>
+
+        <Route path='/authorization'>
+          <Authorization />
         </Route>
 
         <Route path='*'>
