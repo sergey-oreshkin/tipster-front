@@ -6,10 +6,22 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import LoginPage from './components/LoginPage/LoginPage';
 import Authorization from './components/Authorization/Authorization';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { getProfile } from './store/API/ProfileApi';
+import { tokenStorageName } from './utils/constants';
 
-function App() {
 
-  const [loggedIn, setLoggedIn] = useState(false);
+const App = () => {
+
+  const { loggedIn } = useSelector(state => state);
+  const dispatcher = useDispatch();
+
+  useEffect(() => {
+    if (localStorage.getItem(tokenStorageName)) {
+      dispatcher(getProfile());
+    }
+  }, [])
 
   return (
     <div className="App">

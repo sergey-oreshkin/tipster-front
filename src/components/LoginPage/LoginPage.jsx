@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { hostUrl, githubLoginUri, googleLoginUri } from '../../utils/constants';
+import { hostUrl, githubLoginUri, googleLoginUri, } from '../../utils/constants';
 import googleIcon from '../../images/google_icon.svg';
 import githubIcon from '../../images/github_icon.svg';
 import LoginButton from '../UI/LoginButton/LoginButton';
