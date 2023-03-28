@@ -12,6 +12,5 @@
 @import url(../components/AboutProject/AboutProject.css);
 @import url(../components/AboutProjectCard/AboutProjectCard.css);
 @import url(../components/Feedback/Feedback.css);
-
-
-
+@import url(../components/LoginPage/LoginPage.css);
+@import url(../components/UI/LoginButton/LoginButton.css);
