@@ -4,8 +4,8 @@ const port = window.location.port;
 
 export const apiPrefix = '/api/v0';
 export const hostUrl = protocol + '//' + host + ':' + port;
-export const googleLoginUri = '/oauth2/authorize/google';
-export const githubLoginUri = '/oauth2/authorize/github';
+export const googleLoginUri = 'http://localhost:8080/oauth2/authorize/google';
+export const githubLoginUri = 'http://localhost:8080/oauth2/authorize/github';
 
 export const userProfileUri = '/users/profile';
 

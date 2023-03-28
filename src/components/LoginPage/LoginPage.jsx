@@ -12,8 +12,8 @@ const LoginPage = () => {
             <div className='login-page_container'>
                 <h1>Добро пожаловать</h1>
                 <h3>Выберите как вы хотите войти</h3>
-                <LoginButton href={hostUrl + googleLoginUri} icon={googleIcon} text={'Войти с Google'} />
-                <LoginButton href={hostUrl + githubLoginUri} icon={githubIcon} text={'Войти с Github'} />
+                <LoginButton href={googleLoginUri} icon={googleIcon} text={'Войти с Google'} />
+                <LoginButton href={githubLoginUri} icon={githubIcon} text={'Войти с Github'} />
             </div>
 
         </div>
