@@ -9,6 +9,8 @@ export const googleLoginUri = '/oauth2/authorize/google';
 export const githubLoginUri = '/oauth2/authorize/github';
 
 export const userProfileUri = '/users/profile';
+export const themesUri = '/themes';
+export const tipsUri = '/tips';
 
 export const tokenStorageName = 'BaererToken';
 
