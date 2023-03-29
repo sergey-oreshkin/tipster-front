@@ -9,7 +9,14 @@ const ProfileSlice = createSlice({
         username: '',
         userPic: ''
     },
-    reducers: {},
+    reducers: {
+        logout(state) {
+            state.loggedIn = false;
+            state.username = '';
+            state.userPic = '';
+            console.log('logout');
+        }
+    },
     extraReducers: builder => {
         builder
             .addCase(getProfile.fulfilled, (state, { payload }) => {
@@ -31,5 +38,7 @@ const ProfileSlice = createSlice({
             })
     }
 });
+
+export const { logout } = ProfileSlice.actions;
 
 export default ProfileSlice.reducer;

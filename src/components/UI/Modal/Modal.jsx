@@ -1,17 +1,17 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setShowModal } from '../../../store/AppSlice';
+import { setShowModal } from '../../../store/NoteSlice';
 
 import cl from './Modal.module.css';
 
 const Modal = ({ children, name }) => {
     const dispatcher = useDispatch();
-    const { showModal } = useSelector(state => state);
+    const note = useSelector(state => state.note);
 
     const classes = [cl.modal];
 
-    if (showModal === name) {
+    if (note.showModal === name) {
         classes.push(cl.active);
     }
 

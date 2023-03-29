@@ -1,0 +1,14 @@
+.content {
+    width: 72%;
+    overflow-y: scroll;
+}
+
+.content div {
+    margin: 0 auto;
+    padding: 0 25px;
+    max-width: 900px;
+}
+
+h3 {
+    text-align: center;
+}

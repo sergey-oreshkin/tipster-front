@@ -1,8 +1,12 @@
-import { combineReducers, configureStore} from "@reduxjs/toolkit";
-import ProfileReducer from "./ProfileSlice";
+import { configureStore } from "@reduxjs/toolkit";
+import profileReducer from "./ProfileSlice";
+import noteReducer from "./NoteSlice";
 
 const store = configureStore({
-    reducer: ProfileReducer,
+    reducer: {
+        profile: profileReducer,
+        note: noteReducer
+    }
 });
 
 export default store;
