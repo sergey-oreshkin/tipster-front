@@ -23,13 +23,13 @@ const DeleteTipForm = ({type}) => {
 
     return (
         <div>
-            {showModal === 'deleteTip' &&
+            {showModal === 'deleteTip' && activeTip &&
                 <form className={cl.form}>
                     <p style={{ color: '#333' }}>Заметка <b> {tips.find(tip => tip.id === activeTip).title} </b> будет удалена! </p>
                     <input type="submit" style={{ backgroundColor: '#f00' }} onClick={handleSubmit} value='Удалить' />
                 </form>
             }
-            {showModal === 'deleteTheme' &&
+            {showModal === 'deleteTheme' && activeTheme &&
                 <form className={cl.form}>
                     <p style={{ color: '#333' }}>Раздел <b> {themes.find(theme => theme.id === activeTheme).title} </b> будет удален! </p>
                     <input type="submit" style={{ backgroundColor: '#f00' }} onClick={handleSubmit} value='Удалить' />
