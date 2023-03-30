@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.App{
+.App {
   font-family: 'Open Sans', Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -19,3 +19,14 @@ html {
   max-width: 100vw;
 }
 
+.pressable {
+  cursor: pointer;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+h3 {
+  margin: 3px;
+}

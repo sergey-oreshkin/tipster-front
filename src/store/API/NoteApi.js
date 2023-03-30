@@ -46,7 +46,6 @@ export const getTip = createAsyncThunk(
         try {
             const endpoint = hostUrl + apiPrefix + tipsUri + '?themeId=' + themeId;
             const response = await apiClient.get(endpoint);
-            console.log(response)
             return response.data
         } catch (err) {
             if (err.isAxiosError) {
@@ -86,6 +85,42 @@ export const updateTip = createAsyncThunk(
             const endpoint = hostUrl + apiPrefix + tipsUri;
             const response = await apiClient.put(endpoint, JSON.stringify(data));
             return response.data
+        } catch (err) {
+            if (err.isAxiosError) {
+                if (err.response.status !== 0) {
+                    return rejectWithValue({ data: err.response.data, status: err.response.status });
+                }
+                return rejectWithValue({ error: 'Сервер не доступен!' });
+            }
+            return rejectWithValue({ error: 'Неизвестная ошибка ' + err });
+        }
+    }
+);
+
+export const deleteTip = createAsyncThunk(
+    'delete/tips',
+    async (id, {rejectWithValue})=>{
+        try {
+            const endpoint = hostUrl + apiPrefix + tipsUri + '/' + id;
+            await apiClient.delete(endpoint);
+        } catch (err) {
+            if (err.isAxiosError) {
+                if (err.response.status !== 0) {
+                    return rejectWithValue({ data: err.response.data, status: err.response.status });
+                }
+                return rejectWithValue({ error: 'Сервер не доступен!' });
+            }
+            return rejectWithValue({ error: 'Неизвестная ошибка ' + err });
+        }
+    }
+);
+
+export const deleteTheme = createAsyncThunk(
+    'delete/theme',
+    async (id, {rejectWithValue})=>{
+        try {
+            const endpoint = hostUrl + apiPrefix + themesUri + '/' + id;
+            await apiClient.delete(endpoint);
         } catch (err) {
             if (err.isAxiosError) {
                 if (err.response.status !== 0) {

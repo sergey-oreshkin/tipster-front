@@ -5,11 +5,13 @@ import Tip from '../Tip/Tip';
 
 const Theme = ({ theme, clickHandle }) => {
     const { activeTheme, tips } = useSelector(state => state.note);
-    console.log(tips);
+
+    const classes = ['pressable']
+    if (theme.id === activeTheme) classes.push('active');
 
     return (
         <div>
-            <p className='pressable' style={{ fontWeight: 'bold' }} onClick={() => clickHandle(theme.id, 'theme')}>{theme.title}</p>
+            <p className={classes.join(' ')} style={{ fontWeight: 'bold' }} onClick={() => clickHandle(theme.id, 'theme')}>{theme.title}</p>
             {
                 activeTheme === theme.id
                     ?

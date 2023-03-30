@@ -1,5 +1,6 @@
 import React from 'react';
 import CreateThemeForm from '../Forms/CreateThemeForm';
+import DeleteTipForm from '../Forms/DeleteTipForm';
 import TipForm from '../Forms/TipForm.jsx';
 import NoteContent from '../NoteContent/NoteContent';
 import NoteList from '../NoteList/NoteList';
@@ -19,6 +20,12 @@ const Note = () => {
             </Modal>
             <Modal name='editTip'>
                 <TipForm type='edit' />
+            </Modal>
+            <Modal name='deleteTip'>
+                <DeleteTipForm type = 'tip'/>
+            </Modal>
+            <Modal name='deleteTheme'>
+                <DeleteTipForm type = 'theme'/>
             </Modal>
         </div>
     )

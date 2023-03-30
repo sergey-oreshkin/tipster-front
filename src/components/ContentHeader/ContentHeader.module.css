@@ -1,0 +1,18 @@
+.ch{
+    display: flex;
+    width: 100%;
+}
+
+.msg {
+    width: 60%;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    text-align: right;
+    height: 20px;
+}
+.nav *{
+    margin: 0 10px;
+}

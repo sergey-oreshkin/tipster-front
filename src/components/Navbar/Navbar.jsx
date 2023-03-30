@@ -32,8 +32,15 @@ const Navbar = ({ isEntrance }) => {
             <ul className="navigation__button-list">
               {location.pathname === '/notes' ? (
                 <>
-                  <li className="navigation__button-item navigation__item"><button onClick={() => clickHandler('newTheme')} className="navigation__button-link link notes-button">Создать тему</button></li>
-                  <li className="navigation__button-item navigation__item"><button onClick={() => clickHandler('newTip')} className="navigation__button-link link notes-button">Добавить заметку</button></li>
+                  <li className="navigation__button-item navigation__item">
+                    <button onClick={() => clickHandler('newTheme')} className="navigation__button-link link notes-button pressable">Создать тему</button>
+                  </li>
+                  <li className="navigation__button-item navigation__item">
+                    <button onClick={() => clickHandler('newTip')} className="navigation__button-link link notes-button pressable">Добавить заметку</button>
+                  </li>
+                  <li className="navigation__button-item navigation__item">
+                    <button onClick={() => clickHandler('deleteTheme')} className="navigation__button-link link notes-button pressable">Удалить тему</button>
+                  </li>
                 </>
               ) : (
                 <>

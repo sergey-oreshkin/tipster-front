@@ -34,7 +34,7 @@ const ProfileSlice = createSlice({
                 state.loggedIn = false;
                 state.username = '';
                 state.userPic = '';
-                console.error(payload.message);
+                // console.error(payload.message);
             })
     }
 });

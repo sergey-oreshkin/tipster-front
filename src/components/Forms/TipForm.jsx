@@ -20,7 +20,7 @@ const TipForm = ({ type }) => {
             if (tip) {
                 setTheme(themes.find(theme => theme.id === tip.theme).title);
                 setTitle(tip.title);
-                setText(tip.text)
+                setText(tip.text);
             }
         }
     }, [type, themes, tips, activeTip]);
@@ -60,7 +60,7 @@ const TipForm = ({ type }) => {
                 <input name='title' type="text" onChange={e => setTitle(e.target.value)} value={title} placeholder='Введите название' />
             </p>
             <textarea name='text' rows='25' cols='60' onChange={e => setText(e.target.value)} value={text} placeholder='Введите текст'></textarea>
-            <input type="submit" onClick={handleSubmit} value='Создать' />
+            <input type="submit" onClick={handleSubmit} value='Отправить' />
         </form>
     )
 

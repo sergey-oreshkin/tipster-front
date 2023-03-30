@@ -180,6 +180,10 @@ input { /* 1 */
   border: 0;
 }
 
+p {
+  margin: 5px;
+}
+
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.

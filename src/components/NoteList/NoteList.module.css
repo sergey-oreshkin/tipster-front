@@ -3,3 +3,7 @@
     overflow-y: scroll;
     padding: 2px 5px;
 }
+
+.notelist p {
+    margin: 2px 2px;
+}

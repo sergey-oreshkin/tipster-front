@@ -16,7 +16,7 @@ const NoteList = () => {
     const items = [...themes];
 
     // eslint-disable-next-line 
-    useEffect(() => { dispatch(getThemes()) }, []);
+    useEffect(() => { dispatch(getThemes()) }, [themes]);
 
     const clickHandle = (id, type) => {
         if (type === 'tip') {
