@@ -6,7 +6,7 @@ export const getProfile = createAsyncThunk(
     'get/profile',
     async (data, { rejectWithValue }) => {
         try {
-            const response = await apiClient.get(hostUrl+ apiPrefix + userProfileUri);
+            const response = await apiClient.get(hostUrl + apiPrefix + userProfileUri);
             return response.data;
         } catch (err) {
             if (err.isAxiosError) {

@@ -1,4 +1,4 @@
-.about-project{
+.about-project {
   width: 100%;
   box-sizing: border-box;
   background: #edf2f7;
@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-.about-project__title{
+.about-project__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 38px;
@@ -20,7 +20,7 @@
   color: #292929;
 }
 
-.about-project__container{
+.about-project__container {
   display: flex;
   justify-content: center;
   gap: 20px;

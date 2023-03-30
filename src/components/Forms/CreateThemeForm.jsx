@@ -12,7 +12,7 @@ const CreateThemeForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatcher(createTheme({title: title}));
+        dispatcher(createTheme({ title: title }));
         setTitle('');
         dispatcher(setShowModal(''));
     }

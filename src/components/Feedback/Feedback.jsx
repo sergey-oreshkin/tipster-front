@@ -3,7 +3,7 @@ import feedbackPic from '../../images/20943543.jpg'
 
 const Feedback = () => {
 
-    return (
+  return (
     <section className='feedback'>
       <div className='feedback__section'>
         <div className='feedback__box'>
@@ -14,7 +14,7 @@ const Feedback = () => {
         <img className='feedback__picture' alt='изображение с громкоговорителем и сообщением об ошибке' src={feedbackPic}></img>
       </div>
     </section>
-    )
+  )
 }
 
 export default Feedback;

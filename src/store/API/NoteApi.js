@@ -99,7 +99,7 @@ export const updateTip = createAsyncThunk(
 
 export const deleteTip = createAsyncThunk(
     'delete/tips',
-    async (id, {rejectWithValue})=>{
+    async (id, { rejectWithValue }) => {
         try {
             const endpoint = hostUrl + apiPrefix + tipsUri + '/' + id;
             await apiClient.delete(endpoint);
@@ -117,7 +117,7 @@ export const deleteTip = createAsyncThunk(
 
 export const deleteTheme = createAsyncThunk(
     'delete/theme',
-    async (id, {rejectWithValue})=>{
+    async (id, { rejectWithValue }) => {
         try {
             const endpoint = hostUrl + apiPrefix + themesUri + '/' + id;
             await apiClient.delete(endpoint);

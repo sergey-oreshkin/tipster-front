@@ -7,11 +7,11 @@ import AboutProject from '../AboutProject/AboutProject';
 import Feedback from '../Feedback/Feedback';
 
 
-const Main = ({isEntrance}) => {
+const Main = ({ isEntrance }) => {
 
   return (
     <div className='main'>
-      <Header isEntrance={isEntrance}/>
+      <Header isEntrance={isEntrance} />
       <main>
         <Promo />
         <AboutProject />

@@ -13,17 +13,17 @@
   margin: 0 auto;
 }
 
-.feedback__picture{
+.feedback__picture {
   width: 50%;
 }
 
-.feedback__button{
+.feedback__button {
   border: none;
   margin-left: 0;
   margin-top: 55px;
 }
 
-.feedback__title{
+.feedback__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 38px;
@@ -32,7 +32,7 @@
   color: #292929;
 }
 
-.feedback__subtitle{
+.feedback__subtitle {
   max-width: 540px;
   margin: 0;
   font-weight: 400;
@@ -40,5 +40,4 @@
   color: #292929;
 }
 
-.feedback__box{
-}
+.feedback__box {}

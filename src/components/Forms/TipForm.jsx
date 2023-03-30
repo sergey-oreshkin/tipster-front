@@ -23,7 +23,7 @@ const TipForm = ({ type }) => {
                 setText(tip.text);
             }
         }
-    }, []);
+    }, [activeTip, type]);
 
     const handleSubmit = e => {
         e.preventDefault();

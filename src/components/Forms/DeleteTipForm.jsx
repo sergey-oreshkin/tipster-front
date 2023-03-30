@@ -7,15 +7,15 @@ import { deleteTip, deleteTheme } from '../../store/API/NoteApi';
 import cl from './Form.module.css';
 
 
-const DeleteTipForm = ({type}) => {
+const DeleteTipForm = ({ type }) => {
     const { activeTip, tips, themes, activeTheme, showModal } = useSelector(state => state.note);
     const dispatch = useDispatch();
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (type === "tip"){
-            dispatch(deleteTip(activeTip)); 
-        } else if (type === "theme"){
+        if (type === "tip") {
+            dispatch(deleteTip(activeTip));
+        } else if (type === "theme") {
             dispatch(deleteTheme(activeTheme));
         }
         dispatch(setShowModal(''));

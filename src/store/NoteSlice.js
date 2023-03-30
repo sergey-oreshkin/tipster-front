@@ -97,7 +97,7 @@ const NoteSlice = createSlice({
             })
 
             .addCase(deleteTheme.fulfilled, state => {
-                const arr = state.themes.filter(theme=> theme.id !== state.activeTheme);
+                const arr = state.themes.filter(theme => theme.id !== state.activeTheme);
                 state.themes = arr;
                 state.tips = [];
                 state.activeTip = 0;

@@ -1,11 +1,12 @@
-.ch{
+.ch {
     display: flex;
-    width: 72%;
+    width: 80%;
 }
 
 .msg {
-    width: 60%;
+    width: 80%;
     text-align: center;
+    color: #080;
 }
 
 .nav {
@@ -13,6 +14,7 @@
     text-align: right;
     height: 20px;
 }
-.nav *{
+
+.nav * {
     margin: 0 10px;
 }

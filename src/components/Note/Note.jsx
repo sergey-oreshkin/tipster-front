@@ -22,10 +22,10 @@ const Note = () => {
                 <TipForm type='edit' />
             </Modal>
             <Modal name='deleteTip'>
-                <DeleteTipForm type = 'tip'/>
+                <DeleteTipForm type='tip' />
             </Modal>
             <Modal name='deleteTheme'>
-                <DeleteTipForm type = 'theme'/>
+                <DeleteTipForm type='theme' />
             </Modal>
         </div>
     )

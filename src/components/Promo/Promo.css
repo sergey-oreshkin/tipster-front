@@ -10,7 +10,7 @@
   border-radius: 10px;
 }
 
-.promo__container{
+.promo__container {
   display: flex;
   flex-direction: column;
 }
@@ -38,7 +38,7 @@
   max-width: 640px;
 }
 
-.promo__text{
+.promo__text {
   max-width: 340px;
   margin-top: 75px;
   font-weight: 400;
@@ -91,13 +91,16 @@
     opacity: 0;
   }
 }
+
 @-webkit-keyframes typedjsBlink {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

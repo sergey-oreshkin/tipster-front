@@ -17,8 +17,8 @@ const ContentHeader = () => {
 
             {Boolean(activeTip) &&
                 <div className={cl.nav}>
-                    <img src={editPic} className="pressable" alt="Редактировать" onClick={()=>dispath(setShowModal('editTip'))}/>
-                    <img src={deleteIcon} className="pressable" alt="Удалить" onClick={()=>dispath(setShowModal('deleteTip'))}/>
+                    <img src={editPic} className="pressable" alt="Редактировать" onClick={() => dispath(setShowModal('editTip'))} />
+                    <img src={deleteIcon} className="pressable" alt="Удалить" onClick={() => dispath(setShowModal('deleteTip'))} />
                 </div>}
 
         </div>
