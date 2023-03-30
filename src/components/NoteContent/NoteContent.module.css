@@ -1,6 +1,7 @@
 .content {
     width: 72%;
     overflow-y: scroll;
+    white-space: pre-line;
 }
 
 .content div {
